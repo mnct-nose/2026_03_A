@@ -1,6 +1,84 @@
 <html>
 	<head>
+		<meta charset="UTF-8" />
 		<title>A班舞鶴市の子どもと保育施設についての調査</title>
+		<style>
+			body {
+				font-family: sans-serif;
+				line-height: 1.7;
+				max-width: 800px;
+				margin: 2em auto;
+				padding: 0 1em;
+				color: #222;
+			}
+			h1 {
+				border-bottom: 3px solid #333;
+				padding-bottom: 0.3em;
+			}
+			h2 {
+				margin-top: 2em;
+				border-left: 6px solid #4a90d9;
+				padding-left: 0.5em;
+			}
+			img {
+				max-width: 100%;
+				border: 1px solid #ccc;
+			}
+			.note {
+				background: #f7f7f7;
+				border-left: 4px solid #999;
+				padding: 0.5em 1em;
+				margin: 1em 0;
+			}
+		</style>
 	</head>
-	<body></body>
+	<body>
+		<h1>A班 舞鶴市の子供と保育施設についての調査</h1>
+
+		<div>
+			<h2>調査結果2: 緯度経度による保育施設・人口相関分析</h2>
+			<p>行政区423区・保育施設38件で、施設の立地と子ども人口の関係を調べた。</p>
+			<ul>
+				<li>
+					施設数・定員合計と子ども人口の相関係数は r = 0.07〜0.12
+					と低く、単純な「子どもが多い地区に施設が多い」という関係は見られなかった
+				</li>
+				<li>
+					一方、施設がある26区は施設がない397区より0〜4歳人口の平均が約1.85倍多い
+				</li>
+				<li>
+					施設の位置が最寄りの行政区の中心から1km以上離れて割り当てられるケースが複数あり、地理的な精度に限界がある
+				</li>
+			</ul>
+			<img
+				src="maizuru_child_population_heatmap_bw.png"
+				alt="舞鶴市 子ども人口ヒートマップ"
+			/>
+
+			<h3>相関が弱い理由</h3>
+			<p>
+				施設と人口が別々の場所に固まっているため、地区単位で比べると噛み合わない。
+			</p>
+			<ul>
+				<li>
+					<strong>施設は「西舞鶴」「東舞鶴」の2つの市街地に集中</strong
+					>。38施設はほぼ全てこの2ヶ所のどちらかにあり、間の山側には施設が1つもない空白地帯がある
+				</li>
+				<li>
+					<strong>子どもは逆に小さな集落に薄く分散</strong
+					>。423行政区のうち48%は子ども(0〜9歳)が5人以下、22%はゼロ人
+				</li>
+				<li>
+					施設は「その地区の子どもが多いから建てた」のではなく「街の中心だから建てた」場所にあり、子どもは中心から離れた小集落にいるため、地区単位で比較すると相関が弱く出る
+				</li>
+				<li>
+					施設の定員合計3,782人分は市全体の子ども(0〜9歳)5,752人の66%をカバーできる規模で、量的な不足ではなく<strong>配置場所と人口分布のミスマッチ</strong>が原因と考えられる
+				</li>
+			</ul>
+			<div class="note">
+				今後の検証案:
+				行政区中心との対応ではなく、施設からの通園圏（半径1.5〜3km程度のバッファ）内の人口カバー率で再集計すると、より実態に近い分析ができる可能性がある。
+			</div>
+		</div>
+	</body>
 </html>
